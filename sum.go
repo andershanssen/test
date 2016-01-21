@@ -16,8 +16,8 @@ func add(){
 }
 
 func sub(){
-	for x := 0; x < -1000000; x++ {
-		i++
+	for x := 0; x < 1000000; x++ {
+		i--
 	}
 }
 
@@ -26,9 +26,7 @@ func main(){
 	go add()
 	go sub()
 
-	Sleep(100*time.Millisecond)
-	fmt.Println("Done:", i);
-
-	Println(NumCPU())
+	time.Sleep(100*time.Millisecond)
+	fmt.Println("The sum is:", i);
 }
 
